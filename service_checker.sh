@@ -14,7 +14,7 @@ then
     exit 1
 fi
 
-STATUS=$(systemctl is-active "$SERVICE" 2>/dev/null)
+STATUS=$(systemctl is-active "$SERVICE" 2>/dev/null || true)
 
 if [ "$STATUS" = "active" ]
 then 
