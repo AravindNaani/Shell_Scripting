@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-for HOSTNAME in google.com facebook.com linkedin.com
+for HOSTNAME in google.com facebook.com linkedin.com 8.8.8.
 do 
     ping -c 1 $HOSTNAME
     if [ "$?" -eq 0 ]
