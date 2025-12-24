@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-for HOSTNAME in google.com facebook.com linkedin.com 8.8.8.
+for HOSTNAME in google.com facebook.com linkedin.com
 do 
-    ping -c 1 $HOSTNAME
+    STATUS=$(ping -c 1 $HOSTNAME)
     if [ "$?" -eq 0 ]
     then
         echo "$HOSTNAME is UP"
