@@ -4,8 +4,7 @@ set -euo pipefail
 
 for HOSTNAME in google.com facebook.com linkedin.com 8.8.8.
 do 
-    STATUS=$(ping -c 1 $HOSTNAME)
-    if [ "$?" -eq 0 ]
+    if ping -c 1 "$HOSTNAME" >/dev/null 2>&1
     then
         echo "$HOSTNAME is UP"
     else
